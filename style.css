@@ -1,0 +1,28 @@
+body {
+display: block;
+justify-content: center;
+align-items: center;
+background-color: rgb(38, 38, 38);
+color: white;
+margin: 50px;
+text-decoration: none;
+}
+
+h1 {
+text-align: center;
+text-decoration: underline;
+margin-bottom: 5px; /* Ajoute une marge de 5 pixels en dessous du titre */
+}
+
+#video-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
+list-style-type: none;
+}
+
+#video-list li {
+margin: 30px; /* Ajoute une marge de 5 pixels autour de chaque vidéo */
+}

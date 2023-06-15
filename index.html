@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liste de vidéos</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Liste de vidéos :</h1>
+  <ul id="video-list"></ul>
+
+  <script>
+      fetch('http://localhost:8888/Mahdi/Mahdi.txt')
+      .then(response => response.text())
+      .then(data => {
+        var videoUrls = data.split('\n');
+
+        var videoList = document.getElementById('video-list');
+
+        videoUrls.forEach(url => {
+          var listItem = document.createElement('li');
+          listItem.innerHTML = url;
+          videoList.appendChild(listItem);
+        });
+      })
+      .catch(error => {
+        console.error('Une erreur s\'est produite lors du chargement du fichier :', error);
+      });
+  </script>
+</body>
+</html>
